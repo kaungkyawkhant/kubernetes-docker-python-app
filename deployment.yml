@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: python-flask-deployment
+  labels:
+    app: docker-py
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: docker-py
+  template:
+    metadata:
+      labels:
+        app: docker-py
+    spec:
+      containers:
+      - name: docker-py
+        image: kaungkhant/docker-py:v1
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 5000
