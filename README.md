@@ -1,4 +1,25 @@
 # kubernetes-docker-python-app
+
+##Docker container commands
+View the docker images
+```
+docker images
+
+```
+Building the docker image
+```
+docker build -t docker-py:v1 .
+
+```
+Tag the docker image and push to docker hub
+```
+docker tag docker-py:v1 kaungkhant/docker-py:v1
+
+docker push kaungkhant/docker-py:v1
+
+```
+
+
 View the the running pod in kubernetes cluster 
 
 ```
